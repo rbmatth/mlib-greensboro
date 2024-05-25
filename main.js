@@ -5,7 +5,7 @@ function run() {
   // Making our connection
   let url =
     "https://bdfed.stitch.mlbinfra.com/bdfed/stats/player?stitch_env=prod&season=2024&sportId=13&stats=season&group=hitting&gameType=R&limit=25&offset=0&sortStat=homeRuns&order=desc&leagueIds=116&teamId=477";
-    // "https://bdfed.stitch.mlbinfra.com/bdfed/stats/player?stitch_env=prod&season=2024&sportId=13&stats=season&group=hitting&gameType=R&limit=25&offset=0&sortStat=homeRuns&order=desc&leagueIds=116&teamId=477";
+  // "https://bdfed.stitch.mlbinfra.com/bdfed/stats/player?stitch_env=prod&season=2024&sportId=13&stats=season&group=hitting&gameType=R&limit=25&offset=0&sortStat=homeRuns&order=desc&leagueIds=116&teamId=477";
   xhr.open("GET", url, true);
 
   // function execute after request is successful
@@ -32,9 +32,9 @@ function run() {
 
         const values = Object.values(player);
         values.forEach((value) => {
-            const td = document.createElement("td");
-            td.innerText = value;
-            tr.appendChild(td);
+          const td = document.createElement("td");
+          td.innerText = value;
+          tr.appendChild(td);
         });
 
         // console.log(Object.values(player));
